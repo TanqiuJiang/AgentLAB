@@ -1801,7 +1801,7 @@ def main():
                        help="Number of REFUSED baseline samples to test per model")
     parser.add_argument("--start_idx", type=int, default=0)
     parser.add_argument("--api_key", type=str, 
-                       default='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')
+                       default='')
     parser.add_argument("--num_strategies", type=int, default=3)
     parser.add_argument("--max_memory_words", type=int, default=15)
     parser.add_argument("--min_evasiveness", type=float, default=3.5)
