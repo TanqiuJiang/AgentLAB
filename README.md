@@ -310,12 +310,11 @@ The attack operates in two phases: (1) **memory injection** — evasive preferen
 If you use AgentLAB in your research, please cite:
 S
 ```bibtex
-@article{agentlab2026,
+@article{jiang2026agentlab,
+  author    = {Tanqiu Jiang and Yuhui Wang and Jiacheng Liang and Ting Wang},
   title     = {AgentLAB: Benchmarking LLM Agents against Long-Horizon Attacks},
-  author    = {},
-  journal   = {},
+  journal   = {arXiv preprint arXiv:2602.16901},
   year      = {2026},
-  url       = {}
 }
 ```
 
