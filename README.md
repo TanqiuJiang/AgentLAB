@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <a href="https://arxiv.org/abs/XXXX.XXXXX"><img src="https://img.shields.io/badge/arXiv-Paper-red" alt="arXiv Paper"/></a>
+  <!-- <a href="https://arxiv.org/abs/XXXX.XXXXX"><img src="https://img.shields.io/badge/arXiv-Paper-red" alt="arXiv Paper"/></a> -->
   <img src="https://img.shields.io/badge/License-MIT-green" alt="License"/>
   <img src="https://img.shields.io/badge/Python-3.10%2B-blue" alt="Python"/>
 </p>
@@ -305,10 +305,11 @@ The attack operates in two phases: (1) **memory injection** — evasive preferen
 ---
 
 
+<!--
 ## Citation
 
 If you use AgentLAB in your research, please cite:
-S
+
 ```bibtex
 @article{jiang2026agentlab,
   author    = {Tanqiu Jiang and Yuhui Wang and Jiacheng Liang and Ting Wang},
@@ -317,6 +318,7 @@ S
   year      = {2026},
 }
 ```
+-->
 
 ---
 
