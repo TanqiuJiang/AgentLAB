@@ -1,3 +1,22 @@
+# WebShop env requirements  (conda env: webshop, Python 3.10.x)
+# ---------------------------------------------------------------------------
+# This is your VERIFIED pip freeze of the working webshop env (Python 3.10.19),
+# with only two lines removed because they come from conda, not pip:
+#   faiss==1.9.0        -> installed via `conda install -c pytorch faiss-cpu`
+#   mkl-service==2.4.0  -> conda-managed (numpy works fine without it)
+# (the mkl_fft / mkl_random / packaging file:// lines were already stripped.)
+#
+# INSTALL WITH --no-deps:
+#   pip install --no-deps -r webshop_requirements.txt
+# This env holds the WebShop stack AND the AgentLab runner stack together and
+# pins pydantic 1.9 next to packages whose metadata wants pydantic 2 (google-genai;
+# Gemini is offloaded to a separate gemini_env). A plain `pip install -r` fails the
+# resolver on that conflict. --no-deps installs the exact pinned set, which is what
+# actually works. setup_webshop.sh does this for you.
+#
+# `env==0.1.0` and `train==0.0.5` look like accidental installs and are safe to drop,
+# but are harmless and kept here to match the working env exactly.
+# ---------------------------------------------------------------------------
 aiofiles==23.2.1
 altair==5.5.0
 annotated-doc==0.0.4
@@ -27,7 +46,6 @@ docstring_parser==0.17.0
 en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.4.0/en_core_web_sm-3.4.0.tar.gz#sha256=e8813936311a536d2ce7df155817674f20e2a3896dd0e875367446049a00e0dd
 env==0.1.0
 exceptiongroup==1.3.1
-faiss==1.9.0
 fastapi==0.123.10
 ffmpy==1.0.0
 filelock==3.20.0
@@ -62,9 +80,6 @@ langcodes==3.5.1
 lightgbm==4.6.0
 MarkupSafe==2.1.5
 matplotlib==3.8.4
-mkl-service==2.4.0
-mkl_fft @ file:///io/mkl313/mkl_fft_1730824109137/work
-mkl_random @ file:///io/mkl313/mkl_random_1730823916628/work
 mpmath==1.3.0
 murmurhash==1.0.15
 narwhals==2.13.0
@@ -75,7 +90,6 @@ onnxruntime==1.23.2
 openai==2.9.0
 orjson==3.11.4
 outcome==1.3.0.post0
-packaging @ file:///home/task_176104877067765/conda-bld/packaging_1761049113113/work
 pandas==1.4.2
 pathlib_abc==0.1.1
 pathy==0.11.0
